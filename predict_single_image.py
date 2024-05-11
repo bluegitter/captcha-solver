@@ -4,7 +4,7 @@ from keras.models import load_model
 from PIL import Image
 
 # 数据目录和文件名
-file_path = '/Users/yanfei/Downloads/code.jpeg'
+file_path = './data1/6oayu.jpeg'
 image_size = (120, 38)  # 假设图像尺寸为50x200
 characters = '0123456789abcdefghijklmnopqrstuvwxyz'  # 包括所有可能字符
 num_classes = len(characters)
@@ -23,7 +23,6 @@ def load_single_image(file_path, image_size):
 # 加载图像
 x_test = load_single_image(file_path, image_size)
 
-print(x_test)
 # 加载模型
 model_path = './model/captcha_model-v30000.h5'
 model = load_model(model_path)
